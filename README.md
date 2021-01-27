@@ -32,7 +32,7 @@ The raspberry is a little computer whose OS (Linux) is stored in a micro-SD card
 Insert the SD card in your computer
 Install Raspberry Pi Imager on your computer from this [website](https://www.raspberrypi.org/software/) or type this in a terminal window : sudo apt install rpi-imager
 Open the software, you will get this window :
-![alt text](https://github.com/clement-barbier/smartbirdhouse/blob/Images/images_image1.png "Software")
+![alt text](https://github.com/clement-barbier/smartbirdhouse/blob/Images/images_image3.png "Software")
 
 Choose Raspbian and the proper SD card and click on “Write”.
 
@@ -41,7 +41,7 @@ Once this is done, you can start assembling your components together.
 #### Step 3 : Assemble your components together
 
 Below you can see the location of the connectors of the raspberry pi 3 board.
-![alt text](https://github.com/clement-barbier/smartbirdhouse/blob/Images/images_image2.png "Board")
+![alt text](https://github.com/clement-barbier/smartbirdhouse/blob/Images/images_image1.png "Board")
 
 Connect the Camera to the Camera CSI on the board.
 Connect the PIR motion sensor to the GPIO pins using 3 F-F jumpers (see the GPIO pins below).
@@ -52,7 +52,7 @@ Connect the output pin of the sensor to the GPIO 4 pin of the raspberry.
 
 There are two numerotations possible for the GPIO pins, so it is important to know what numerotation you use. You can use the BOARD numbers that design the pins in their order on the Raspberry Pi (numbers in the red rectangle below).
 Or you can use the BCM numerotation, that corresponds to the numbers of each GPIO (if it is written GPIO4, you use the number 4 for the numerotation). 
-![alt text](https://github.com/clement-barbier/smartbirdhouse/blob/Images/images_image3.png "GPIO")
+![alt text](https://github.com/clement-barbier/smartbirdhouse/blob/Images/images_image4.png "GPIO")
 
 You will precise the numerotation you use later, on the python code.
 
@@ -60,7 +60,7 @@ Insert your micro-SD card in the SD card slot.
 Power the raspberry pi, connecting your power bank to micro-USB port of the raspberry.
 
 The whole circuit should look like this : 
-![alt text](https://github.com/clement-barbier/smartbirdhouse/blob/Images/images_image4.png "Circuit")
+![alt text](https://github.com/clement-barbier/smartbirdhouse/blob/Images/images_image6.png "Circuit")
 
 Here you have the assembled device you will put in your birdhouse.
 
@@ -72,10 +72,10 @@ If the SD card is inserted and the raspberry is powered, it will be switched on.
 ![alt text](https://github.com/clement-barbier/smartbirdhouse/blob/Images/images_image5.png "Desktop")
 
 Open the menu on the top left corner, go to settings and click on configuration.
-![alt text](https://github.com/clement-barbier/smartbirdhouse/blob/Images/images_image6.png "Configuration")
+![alt text](https://github.com/clement-barbier/smartbirdhouse/blob/Images/images_image7.png "Configuration")
 
 This will open a window, you just need to activate the camera :
-![alt text](https://github.com/clement-barbier/smartbirdhouse/blob/Images/images_image7.png "Activation of the camera")
+![alt text](https://github.com/clement-barbier/smartbirdhouse/blob/Images/images_image8.png "Activation of the camera")
 
 You can already activate the Remote GPIO that you will need later.
 
@@ -123,7 +123,7 @@ GPIO.setup(PIR,GPIO.IN)
 (it would be GPIO.OUT if it was an output)
  
 For testing if our motion detector is well connected, we use a “Try and Except” block.
-![alt text](https://github.com/clement-barbier/smartbirdhouse/blob/Images/images_image8.png "Try and except")
+![alt text](https://github.com/clement-barbier/smartbirdhouse/blob/Images/images_image9.png "Try and except")
 
 In try, we write the following code : 
 ```python
@@ -284,11 +284,10 @@ This is the back of our prototype with a trap to access to our devices and put c
 Design two boxes, the first will be the basis of the birdhouse and the second will be the manger.
 
 The first one should be like this :
-![alt text](https://github.com/clement-barbier/smartbirdhouse/blob/Images/images_image13.png "First box settings")
-![alt text](https://github.com/clement-barbier/smartbirdhouse/blob/Images/images_image14.png "First box")
+![alt text](https://github.com/clement-barbier/smartbirdhouse/blob/Images/images_image2.png "First box")
 
 The manger is going to be like this :
-![alt text](https://github.com/clement-barbier/smartbirdhouse/blob/Images/images_image15.png "Software")
+![alt text](https://github.com/clement-barbier/smartbirdhouse/blob/Images/images_image5.png "Second box")
 
 Download the plans for the two boxes. 
 
