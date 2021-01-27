@@ -31,7 +31,10 @@ The raspberry is a little computer whose OS (Linux) is stored in a micro-SD card
 
 Insert the SD card in your computer
 Install Raspberry Pi Imager on your computer from this [website](https://www.raspberrypi.org/software/) or type this in a terminal window : sudo apt install rpi-imager
-Open the software, you will get this window
+Open the software, you will get this window :
+Inline-style: 
+![alt text](https://github.com/clement-barbier/smartbirdhouse/blob/Images/images_image1.png "Software")
+
 Choose Raspbian and the proper SD card and click on “Write”.
 
 Once this is done, you can start assembling your components together.
@@ -39,6 +42,8 @@ Once this is done, you can start assembling your components together.
 #### Step 3 : Assemble your components together
 
 Below you can see the location of the connectors of the raspberry pi 3 board.
+Inline-style: 
+![alt text](https://github.com/clement-barbier/smartbirdhouse/blob/Images/images_image2.png "Board")
 
 Connect the Camera to the Camera CSI on the board.
 Connect the PIR motion sensor to the GPIO pins using 3 F-F jumpers (see the GPIO pins below).
@@ -49,12 +54,17 @@ Connect the output pin of the sensor to the GPIO 4 pin of the raspberry.
 
 There are two numerotations possible for the GPIO pins, so it is important to know what numerotation you use. You can use the BOARD numbers that design the pins in their order on the Raspberry Pi (numbers in the red rectangle below).
 Or you can use the BCM numerotation, that corresponds to the numbers of each GPIO (if it is written GPIO4, you use the number 4 for the numerotation). 
+Inline-style: 
+![alt text](https://github.com/clement-barbier/smartbirdhouse/blob/Images/images_image3.png "GPIO")
+
 You will precise the numerotation you use later, on the python code.
 
 Insert your micro-SD card in the SD card slot.
 Power the raspberry pi, connecting your power bank to micro-USB port of the raspberry.
 
 The whole circuit should look like this : 
+Inline-style: 
+![alt text](https://github.com/clement-barbier/smartbirdhouse/blob/Images/images_image4.png "Circuit")
 
 Here you have the assembled device you will put in your birdhouse.
 
@@ -63,19 +73,16 @@ To configure your raspberry, connect it to a screen via the HDMI port and to a m
 #### Step 4 : Configure your device
 
 If the SD card is inserted and the raspberry is powered, it will be switched on. When you connect it to a screen via an HDMI cable, you will see this desktop.
-
-
-
-
-
+Inline-style: 
+![alt text](https://github.com/clement-barbier/smartbirdhouse/blob/Images/images_image5.png "Desktop")
 
 Open the menu on the top left corner, go to settings and click on configuration.
-
-
+Inline-style: 
+![alt text](https://github.com/clement-barbier/smartbirdhouse/blob/Images/images_image6.png "Configuration")
 
 This will open a window, you just need to activate the camera :
-
-
+Inline-style: 
+![alt text](https://github.com/clement-barbier/smartbirdhouse/blob/Images/images_image7.png "Activation of the camera")
 
 You can already activate the Remote GPIO that you will need later.
 
@@ -123,6 +130,8 @@ GPIO.setup(PIR,GPIO.IN)
 (it would be GPIO.OUT if it was an output)
  
 For testing if our motion detector is well connected, we use a “Try and Except” block.
+Inline-style: 
+![alt text](https://github.com/clement-barbier/smartbirdhouse/blob/Images/images_image8.png "Try and except")
 
 In try, we write the following code : 
 ```python
@@ -173,6 +182,8 @@ python3 test_PIR.py
 ```
 
 If ‘Motion detected ’ is printed when you pass by the motion sensor, it is working.
+Inline-style: 
+![alt text](https://github.com/clement-barbier/smartbirdhouse/blob/Images/images_image8.png "Test PIR")
 
 #### Step 5 : Code a program to take picture when motion is detected 
 
@@ -269,29 +280,29 @@ You can find more precisions about this part on this [website](https://www.itech
 For this step, you can either use recycled materials or get in touch with a fab lab, and use a laser cut machine like us. If you do your own birdhouse with recycled materials, think about making an isolated compartment (that you can open) to host your device, and holes for the camera and the sensor. 
 
 The following steps of the tutorial are for reproducing our first prototype of the birdhouse that look like this : 
+Inline-style: 
+![alt text](https://github.com/clement-barbier/smartbirdhouse/blob/Images/images_image10.png "Paper Prototype")
 
+This is the front of our prototype. With 3 holes (camera, motion sensor and the entrance of the birdhouse ) and the bird manger.
 
+Inline-style: 
+![alt text](https://github.com/clement-barbier/smartbirdhouse/blob/Images/images_image11.png "Back Prototype")
 
-
-The front of our prototype.
-3 holes (camera, motion sensor and the entrance of the birdhouse ) and the bird manger.
-
-
-
-
-
-
-The back of our prototype. A trap to access to our devices and put correctly our motion sensor and the camera.
+This is the back of our prototype with a trap to access to our devices and put correctly our motion sensor and the camera.
 
 #### Step 1 : Use makercase.com to design the basis of the birdhouse 
 
 Design two boxes, the first will be the basis of the birdhouse and the second will be the manger.
 
 The first one should be like this :
-
-
+Inline-style: 
+![alt text](https://github.com/clement-barbier/smartbirdhouse/blob/Images/images_image12.png "First box settings")
+Inline-style: 
+![alt text](https://github.com/clement-barbier/smartbirdhouse/blob/Images/images_image13.png "First box")
 
 The manger is going to be like this :
+Inline-style: 
+![alt text](https://github.com/clement-barbier/smartbirdhouse/blob/Images/images_image14.png "Software")
 
 Download the plans for the two boxes. 
 
@@ -319,7 +330,8 @@ For our prototype we used plexiglas, but you should actually use plywood because
 You can now assemble the different parts together and glue them with industrial glue (ask help from the fab lab staff, do this under a hood with gloves on).
 
 The result should look like this.
-
+Inline-style: 
+![alt text](https://github.com/clement-barbier/smartbirdhouse/blob/Images/images_image15.png "Assembled birdhouse")
  
 ### Part 3 : Use the birdhouse
 
@@ -327,3 +339,5 @@ You now just need to put your device in the birdhouse, using the back hatch. Put
 Plug the power bank as the code for your program should be executed when the raspberry boots and set your birdhouse outside. 
 
 You can then retrieve your pictures by taking your birdhouse down, unplugging the power bank and recharging it in the meantime and taking the SD card. Plug it to a computer with Linux to retrieve the pictures.
+Inline-style: 
+![alt text](https://github.com/clement-barbier/smartbirdhouse/blob/Images/images_image16.png "Test picture")
