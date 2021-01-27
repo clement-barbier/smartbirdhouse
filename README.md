@@ -69,7 +69,7 @@ To configure your raspberry, connect it to a screen via the HDMI port and to a m
 #### Step 4 : Configure your device
 
 If the SD card is inserted and the raspberry is powered, it will be switched on. When you connect it to a screen via an HDMI cable, you will see this desktop.
-![alt text](https://github.com/clement-barbier/smartbirdhouse/blob/Images/images_image5.png "Desktop")
+![alt text](https://github.com/clement-barbier/smartbirdhouse/blob/Images/images_image13.png "Desktop")
 
 Open the menu on the top left corner, go to settings and click on configuration.
 ![alt text](https://github.com/clement-barbier/smartbirdhouse/blob/Images/images_image7.png "Configuration")
